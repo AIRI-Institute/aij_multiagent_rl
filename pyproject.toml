@@ -1,0 +1,32 @@
+[project]
+name = "aij_multiagent_rl"
+description = "Environment for AIJ Multiagent RL contest 2024"
+requires-python =">=3.8"
+authors = [
+    {name = "lyubaykin", email = "lyubaykin@airi.net"}
+]
+dynamic = ["version"]
+dependencies = [
+    "gymnasium>=0.28.0",
+    "numpy>=1.26.4,<2",
+    "pillow>=10.0.0",
+    "imageio>=2.31.1",
+    "imageio-ffmpeg>=0.5.0",
+    "scipy>=1.11.1",
+    "scikit-image>=0.24.0",
+    "pettingzoo>=1.24.3",
+    "pytest>=8.3.2",
+    "omegaconf>=2.3.0",
+    "PyYAML>=6.0.0"
+]
+[build-system]
+requires = [
+    "setuptools>=61.0"
+]
+build-backend = "setuptools.build_meta"
+[tool.setuptools]
+packages = [
+    "aij_multiagent_rl"
+]
+[tool.setuptools.dynamic]
+version = {attr = "aij_multiagent_rl.__version__"}
